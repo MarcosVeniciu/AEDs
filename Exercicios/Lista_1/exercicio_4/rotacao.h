@@ -2,4 +2,4 @@
 #include <stdlib.h>
 
 
-void zerar(int *valor_1, int *valor_2);
+void rotacionar(int *d, int *e, int *f);

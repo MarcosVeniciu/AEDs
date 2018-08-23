@@ -12,7 +12,7 @@ int main(int argc, char const *argv[]) {
   printf("Informe dois numeros: ");
   scanf("%d %d", &a, &b );
 
-  zerar(*v1,  *v2);
+  zerar(*v1,*v2);
 
 
   return 0;
