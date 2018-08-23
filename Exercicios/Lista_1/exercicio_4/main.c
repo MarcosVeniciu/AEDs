@@ -3,15 +3,15 @@
 #include "TADRotacao.h"
 
 int main(int argc, char const *argv[]) {
-  numero *valor
+  numero valor;
   int A, B, C;
 
-  inicializar (*valor);
+  inicializar (&valor);
 
   printf("Informe tres numeros:");
   scanf("%d %d %d", &A, &B, &C);
 
-  rotacionar(*valor,A,B,C);
+  rotacionar(&valor,A,B,C);
 
   return 0;
 }
