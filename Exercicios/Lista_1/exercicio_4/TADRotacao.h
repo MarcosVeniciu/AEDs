@@ -7,4 +7,5 @@ typedef struct {
 } numero;
 
 int s;
+void inicializar (numero *valor_inicial);
 void rotacionar(numero *valores, int a, int b, int c);
