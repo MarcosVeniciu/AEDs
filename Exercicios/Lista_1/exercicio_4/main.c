@@ -12,6 +12,7 @@ int main(int argc, char const *argv[]) {
   scanf("%d %d %d", &A, &B, &C);
 
   rotacionar(&valor,A,B,C);
+  printar(valor);
 
   return 0;
 }

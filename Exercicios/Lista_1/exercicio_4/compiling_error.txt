@@ -1,3 +1,3 @@
-/tmp/ccHah7Vs.o: Na função "main":
+llç/tmp/ccX60QCD.o: Na função "main":
 main.c:(.text+0x60): referência não definida para "rotacionar"
 collect2: error: ld returned 1 exit status

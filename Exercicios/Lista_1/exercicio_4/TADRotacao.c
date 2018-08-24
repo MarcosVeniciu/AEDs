@@ -14,3 +14,6 @@ void inicializar (numero *valor_inicial){
   valor_inicial->B = 0;
   valor_inicial->C = 0;
 }
+void printar(numero printar) {
+  printf("A: %d  B: %d   C: %d\n", printar.A, printar.B, printar.C);
+}

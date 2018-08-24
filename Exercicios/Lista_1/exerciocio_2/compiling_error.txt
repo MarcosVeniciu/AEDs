@@ -1,0 +1,43 @@
+In file included from /home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/TADZerar.c:3:0,
+                 from /home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/main.c:4:
+/home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/TADZerar.h:7:2: error: conflicting types for ‘numero’
+ }numero;
+  ^~~~~~
+In file included from /home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/main.c:3:0:
+/home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/TADZerar.h:7:2: note: previous declaration of ‘numero’ was here
+ }numero;
+  ^~~~~~
+In file included from /home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/TADZerar.c:3:0,
+                 from /home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/main.c:4:
+/home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/TADZerar.h:11:6: error: conflicting types for ‘inicializar’
+ void inicializar(numero *inicializar);
+      ^~~~~~~~~~~
+In file included from /home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/main.c:3:0:
+/home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/TADZerar.h:11:6: note: previous declaration of ‘inicializar’ was here
+ void inicializar(numero *inicializar);
+      ^~~~~~~~~~~
+In file included from /home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/TADZerar.c:3:0,
+                 from /home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/main.c:4:
+/home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/TADZerar.h:12:6: error: conflicting types for ‘zerar’
+ void zerar (numero *zerar, int a, int);
+      ^~~~~
+In file included from /home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/main.c:3:0:
+/home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/TADZerar.h:12:6: note: previous declaration of ‘zerar’ was here
+ void zerar (numero *zerar, int a, int);
+      ^~~~~
+In file included from /home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/main.c:4:0:
+/home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/TADZerar.c:7:6: error: conflicting types for ‘inicializar’
+ void inicializar(numero *inicializar) {
+      ^~~~~~~~~~~
+In file included from /home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/main.c:3:0:
+/home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/TADZerar.h:11:6: note: previous declaration of ‘inicializar’ was here
+ void inicializar(numero *inicializar);
+      ^~~~~~~~~~~
+In file included from /home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/main.c:4:0:
+/home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/TADZerar.c:11:6: error: conflicting types for ‘zerar’
+ void zerar (numero *zerar, int a, int b){
+      ^~~~~
+In file included from /home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/main.c:3:0:
+/home/marcos/github/AEDs/Exercicios/Lista_1/exerciocio_2/TADZerar.h:12:6: note: previous declaration of ‘zerar’ was here
+ void zerar (numero *zerar, int a, int);
+      ^~~~~
