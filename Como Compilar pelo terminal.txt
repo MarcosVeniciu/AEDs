@@ -1,2 +1,2 @@
-gcc arquivo_1.c arquivo_2.c
+gcc -Wall arquivo_1.c arquivo_2.c
 ./a.out

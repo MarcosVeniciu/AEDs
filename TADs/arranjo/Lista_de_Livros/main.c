@@ -12,9 +12,12 @@ int main(int argc, char const *argv[]) {
   lista_vazia(&lista_1);
   iniciar_livro(&livros);
 
+  Lista_interface();
   while (loop==0){
-    Lista_interface();
     scanf("%d", &escolha);
+    getchar();
+    system("clear");
+    Lista_interface();
     switch (escolha) {
       case 1:
         lista_vazia(&lista_1);
@@ -30,6 +33,9 @@ int main(int argc, char const *argv[]) {
         printf("\nAno: ");
         scanf("%d", &livro_2.ano);
         inserir_lista(&lista_1, livro_2);
+        getchar();
+        system("clear");
+        Lista_interface();
       break;
       case 4:
         printf("Qual posiçao que remover:");
