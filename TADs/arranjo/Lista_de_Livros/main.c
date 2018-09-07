@@ -38,18 +38,12 @@ int main(int argc, char const *argv[]) {
         Lista_interface();
       break;
       case 4:
-        printf("Qual posiçao que remover:");
+        printf("Qual posiçao que remover[1 = primeiro]:");
         scanf("%d", &posicao_1);
-        remove_lista(&lista_1, posicao_1, &livro_2);
+        remove_lista(&lista_1, (posicao_1-1), &livro_2);
       break;
       case 5:
         imprimi_lista (lista_1);
-      break;
-      case 6:
-        system("clear");
-      break;
-      case 7:
-        system("cls");
       break;
     }
   }

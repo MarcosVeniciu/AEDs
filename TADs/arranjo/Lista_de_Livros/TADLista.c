@@ -17,9 +17,6 @@ void Lista_interface(){
   printf("# [3] Inserir dados na lista.                                                                    #\n");
   printf("# [4] Retirar dados da lista.                                                                    #\n");
   printf("# [5] Imprimir a lista.                                                                          #\n");
-  printf("# Limpar Tela:                                                                                   #\n");
-  printf("#       [6] Linux                                                                                #\n");
-  printf("#       [7] Windows                                                                              #\n");
   printf("##################################################################################################\n");
 }
 void lista_vazia(Lista *Lista_vazia){ //torna a lista vazia
