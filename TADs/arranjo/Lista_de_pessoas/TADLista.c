@@ -9,6 +9,9 @@ int faz_lista_vazia( lista *zerar_lista){
 }
 
 int verifica (lista *situacao_lista){
+
+  interface();
+  // system("clear");
   if (situacao_lista->primeiro == situacao_lista->ultimo) {
     printf("A lista esta vaizia\n");
   }
@@ -45,8 +48,10 @@ int remover(lista *remove_lista){
 
 void imprimi(lista imprimir_lista){
   int i;
-
-  printf("##################################################\n");
+  // printf("##################################################\n");
+  // getchar();
+  interface();
+  system("clear");
   printf("#                     Resultado                   \n");
   printf("#\n");
   for (i = imprimir_lista.primeiro; i < imprimir_lista.ultimo; i++) {
@@ -54,7 +59,6 @@ void imprimi(lista imprimir_lista){
     printf("#\n");
   }
 }
-
 
 void interface(){
   // Windows: system("cls");

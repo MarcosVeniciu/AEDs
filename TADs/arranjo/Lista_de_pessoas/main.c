@@ -13,7 +13,9 @@ int main(int argc, char const *argv[]) {
   interface();
   while (i<=1) {
     scanf("%d", &escolha);
+    getchar();
     interface();
+    system("clear");
     switch (escolha) {
       case 1:
         faz_lista_vazia(&lista_1);
