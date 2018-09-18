@@ -1,45 +1,53 @@
 #include "TADLista.h"
 
 
-void criar_lista_vazia(TipoLista *Nova_lista){
-  Nova_lista->primeiro = (celula*)malloc(sizeof(TipoCelula));
-  Nova_lista->ultimo = Nova_lista->primeiro;
+void faz_lista_vazia(TipoLista *lista){
+  TipoCelula *aux;
+
+  aux = (struct celula*) malloc (sizeof(TipoCelula));
+  aux->proxima_celula = NULL;
+  inicializar_nome(&aux->pessoa);
+  lista->primeiro = aux;
+  lista->ultimo = lista->primeiro;
 }
 
-int verfica_lista_vazia(TipoLista *Nova_lista){
-  if (Nova_lista->primeiro == Nova_lista->ultimo) {
-    printf("A Lista esta vazia\n");
+int verifica_lista (TipoLista *lista){
+  if (lista->primeiro == lista->ultimo) {
+    printf("# A Lista esta Vazia                                       #\n");
   } else {
-    printf("A Lista não esta vazia\n");
+    printf("# A Lista não esta Vazia                                   #\n");
   }
   return 0;
 }
 
-// iseri no final da lista (parece ser mais facil)
-int preencher_lista(TipoLista *lista, TipoPessoa *preenchar_celula){
-  lista->ultimo = (celula*)malloc(sizeof(TipoCelula));
-  lista->ultimo->usuario = *preenchar_celula;
-  lista->ultimo->proxima_celula = NULL;
+int preenchar_lista (TipoLista *lista, char *nome){
+  TipoCelula *aux;
+
+  aux = (struct celula*) malloc (sizeof(TipoCelula));
+  inserir_nome(&(aux->pessoa), nome);
+  aux->proxima_celula = NULL;
+  lista->ultimo->proxima_celula = aux;
+  lista->ultimo = aux;
   return 0;
 }
 
-int remover_lista(TipoLista *lista, char *remover_celula){
-  TipoCelula *aux, *copia;
-  int igual;
+int remover_celula  (TipoLista *lista, char *nome){
+  TipoCelula *aux = NULL, *copia = NULL;
 
   aux = lista->primeiro;
   if (lista->primeiro == lista->ultimo) {
-    printf("lista esta vazia\n");
+    printf("# A Lista esta Vazia                                       #\n");
   } else {
     while (aux->proxima_celula != NULL) {
-      igual = strcmp(aux->usuario.nome, remover_celula);
-      if (igual == 0) {
+      if (strcmp(aux->proxima_celula->pessoa.nome, nome)== 0) {
         copia = aux->proxima_celula;
-        aux = aux->proxima_celula->proxima_celula;
+        aux->proxima_celula = copia->proxima_celula;
         if (aux->proxima_celula == NULL) {
           lista->ultimo = aux;
         }
         free(copia);
+        copia = NULL;
+        break;
       } else {
         aux = aux->proxima_celula;
       }
@@ -47,6 +55,18 @@ int remover_lista(TipoLista *lista, char *remover_celula){
   }
   return 0;
 }
-void imprimir_lista(TipoLista imprimir_celulas){
-  
+
+int imprimir_lista  (TipoLista *lista){
+  TipoCelula *aux;
+
+  aux = lista->primeiro->proxima_celula;
+  if (lista->primeiro == lista->ultimo) {
+    printf("# A Lista esta Vazia                                       #\n");
+  }else{
+    while (aux != NULL) {
+      imprimir_nome(&(aux->pessoa));
+      aux = aux->proxima_celula;
+    }
+  }
+  return 0;
 }
